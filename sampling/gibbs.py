@@ -44,8 +44,10 @@ def gibbs():
     N = 10000
 
     for _ in range(N):
+        # get one sample from a probability distribution conditioned on mother
         _A = sample_one(
                {k:v for k, v in probs.items() if k.endswith(B)}).split('|')[0]
+        # get one sample from a probability distribution conditioned on daughter
         _B = sample_one(
                {k:v for k, v in probs.items() if k.endswith(A)}).split('|')[0]
         samples["{},{}".format(_A, _B)] += 1
