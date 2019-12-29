@@ -1,3 +1,7 @@
+"""
+based on http://aidiary.hatenablog.com/entry/20140728/1406555863
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import uniform
